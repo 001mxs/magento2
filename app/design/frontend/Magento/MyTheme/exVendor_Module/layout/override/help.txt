@@ -1,0 +1,2 @@
+/<Vendor>_<Module>/layout/override/base 	optional 	Layouts that override the default module layouts.
+/<Vendor>_<Module>/layout/override/<parent_theme> 	optional 	Layouts that override the parent theme layouts for the module. 
