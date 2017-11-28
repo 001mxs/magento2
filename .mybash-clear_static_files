@@ -1,0 +1,30 @@
+#!/bin/bash
+echo '------------------------------------------'
+echo '--- magento clear static files -----------'
+echo '------------------------------------------'
+echo ''
+cd /var/www/html/l.magento2.com/magento2/pub/static
+echo '/pub/static - start'
+echo '------------------------------------------'
+ls -a
+echo '------------------------------------------'
+echo ''
+ls | grep -v '.htaccess' | xargs rm -rf 
+echo '/pub/static - clear'
+echo '------------------------------------------'
+ls -a
+echo '------------------------------------------'
+echo ''
+cd /var/www/html/l.magento2.com/magento2/var/view_preprocessed/ 
+echo '/var/view_preprocessed - start' 
+echo '------------------------------------------'
+ls -a
+echo '------------------------------------------'
+echo ''
+rm -Rf /var/www/html/l.magento2.com/magento2/var/view_preprocessed/* 
+echo '/var/view_preprocessed - clear' 
+echo '------------------------------------------'
+ls -a
+echo '------------------------------------------'
+echo 'done!'
+echo 'END'

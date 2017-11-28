@@ -1,0 +1,25 @@
+#!/bin/bash
+echo '------------------------------------------'
+echo '--- magento clear cache & static files ---'
+echo '------------------------------------------'
+echo ''
+echo '--- cache-start status -------------------'
+bin/magento cache:status
+echo ''
+echo '--- cache clean --------------------------'
+bin/magento cache:clean
+echo '------------------------------------------'
+echo 'done!'
+echo ''
+echo '--- cache-end status ---------------------'
+bin/magento cache:status
+echo ''
+echo '--- clear static files -------------------'
+cd /var/www/html/l.magento2.com/magento2/pub/static
+ls | grep -v '.htaccess' | xargs rm -rf 
+echo '/pub/static - clear'
+rm -Rf /var/www/html/l.magento2.com/magento2/var/view_preprocessed/* 
+echo '/var/view_preprocessed - clear' 
+echo 'done!'
+echo ''
+echo 'END'

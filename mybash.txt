@@ -1,1 +1,0 @@
-magento cache:clean; echo '-----------'; magento cache:flush; cd /var/www/html/l.magento2.com/magento2/pub/static; echo '------------------'; ls | grep -v '.htaccess' | xargs rm -rf 

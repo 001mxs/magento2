@@ -5,6 +5,6 @@
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::THEME,
-    'frontend/MyVendor/MyTheme',
+    'frontend/Magento/MyTheme',
     __DIR__
 );
