@@ -1,30 +1,33 @@
 #!/bin/bash
-echo '------------------------------------------'
-echo '--- magento clear static files -----------'
-echo '------------------------------------------'
-echo ''
+echo -e "\033[32mmagento clear static files \033[0m"
 cd /var/www/html/l.magento2.com/magento2/pub/static
-echo '/pub/static - start'
-echo '------------------------------------------'
+echo -e "\033[33m/pub/static\033[0m - \033[33mbefore\033[0m:"
 ls -a
-echo '------------------------------------------'
-echo ''
 ls | grep -v '.htaccess' | xargs rm -rf 
-echo '/pub/static - clear'
-echo '------------------------------------------'
+echo -e "\033[33m/pub/static\033[0m - \033[33mafter\033[0m:"
 ls -a
-echo '------------------------------------------'
-echo ''
 cd /var/www/html/l.magento2.com/magento2/var/view_preprocessed/ 
-echo '/var/view_preprocessed - start' 
-echo '------------------------------------------'
+echo -e "\033[33m/var/view_preprocessed\033[0m - \033[33mbefore\033[0m:"
 ls -a
-echo '------------------------------------------'
-echo ''
 rm -Rf /var/www/html/l.magento2.com/magento2/var/view_preprocessed/* 
-echo '/var/view_preprocessed - clear' 
-echo '------------------------------------------'
+echo -e "\033[33m/var/view_preprocessed\033[0m - \033[33mafter\033[0m:"
 ls -a
-echo '------------------------------------------'
-echo 'done!'
-echo 'END'
+echo -e "\033[32mDONE\033[0m"
+
+#\033[30    чёрный цвет знаков
+#\033[31    красный цвет знаков
+#\033[32    зелёный цвет знаков
+#\033[33    желтый цвет знаков
+#\033[34    синий цвет знаков
+#\033[35    фиолетовый цвет знаков
+#\033[36    цвет морской волны знаков
+#\033[37    серый цвет знаков
+
+#\033[40    чёрный цвет фона
+#\033[41    красный цвет фона
+#\033[42    зелёный цвет фона
+#\033[43    желтый цвет фона
+#\033[44    синий цвет фона
+#\033[45    фиолетовый цвет фона
+#\033[46    цвет морской волны фона
+#\033[47    серый цвет фона
