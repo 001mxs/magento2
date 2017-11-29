@@ -1,17 +1,24 @@
 #!/bin/bash
 echo -e "\033[32mmagento clear static files \033[0m"
 cd /var/www/html/l.magento2.com/magento2/pub/static
-echo -e "\033[33m/pub/static\033[0m - \033[33mbefore\033[0m:"
-ls -a
+echo -e "\033[36m/pub/static\033[0m"
+echo -e "\033[36m--------------------------------------\033[0m"
+echo -e "\033[33mbefore\033[0m:"
+ls -la
 ls | grep -v '.htaccess' | xargs rm -rf 
-echo -e "\033[33m/pub/static\033[0m - \033[33mafter\033[0m:"
-ls -a
+echo -e "\033[33mafter\033[0m:"
+ls -la
+echo -e "\033[36m--------------------------------------\033[0m"
+echo ''
 cd /var/www/html/l.magento2.com/magento2/var/view_preprocessed/ 
-echo -e "\033[33m/var/view_preprocessed\033[0m - \033[33mbefore\033[0m:"
-ls -a
+echo -e "\033[36m/var/view_preprocessed\033[0m"
+echo -e "\033[36m-----------------------------------------\033[0m"
+echo -e "\033[33mbefore\033[0m:"
+ls -la
 rm -Rf /var/www/html/l.magento2.com/magento2/var/view_preprocessed/* 
-echo -e "\033[33m/var/view_preprocessed\033[0m - \033[33mafter\033[0m:"
-ls -a
+echo -e "\033[33mafter\033[0m:"
+ls -la
+echo -e "\033[36m-----------------------------------------\033[0m"
 echo -e "\033[32mDONE\033[0m"
 
 #\033[30    чёрный цвет знаков
