@@ -51,4 +51,16 @@ module.exports = {
         ],
         dsl: 'less'
     }
+	
+	//my custom theme grunt
+    MyTheme: {
+        area: 'frontend',
+        name: 'Magento/MyTheme',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
 };
